@@ -1,0 +1,771 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CE6D781E-F0D5-42F8-9EFE-D85A6B262549}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Прокат_авто</RootNamespace>
+    <AssemblyName>Прокат авто</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialSkin.2.2.3.1\lib\net461\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client.Designer.cs">
+      <DependentUpon>Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager.Designer.cs">
+      <DependentUpon>Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Auth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auth.Designer.cs">
+      <DependentUpon>Auth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="АрендаАвтомобилейDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet22.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet22.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet23.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet23.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet24.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet24.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet25.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet25.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet26.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet26.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet27.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet27.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet28.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet28.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet29.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet29.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet30.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet30.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet31.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet32.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet32.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet33.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet33.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet34.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet34.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet35.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet35.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet36.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet36.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet37.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet37.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet38.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet38.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet39.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet39.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet40.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet40.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АрендаАвтомобилейDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АрендаАвтомобилейDataSet9.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Client.resx">
+      <DependentUpon>Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager.resx">
+      <DependentUpon>Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Auth.resx">
+      <DependentUpon>Auth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="АрендаАвтомобилейDataSet.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet1.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet1.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet10.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet10.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet11.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet11.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet12.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet12.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet13.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet13.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet14.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet14.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet15.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet15.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet16.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet16.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet17.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet17.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet18.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet18.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet19.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet19.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet2.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet2.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet20.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet20.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet21.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet21.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet22.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet22.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet22.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet22.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet23.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet23.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet23.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet23.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet24.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet24.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet24.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet24.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet25.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet25.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet25.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet25.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet26.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet26.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet26.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet26.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet27.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet27.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet27.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet27.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet28.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet28.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet28.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet28.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet29.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet29.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet29.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet29.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet29.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet29.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet3.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet3.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet30.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet30.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet30.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet30.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet31.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet31.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet31.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet32.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet32.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet32.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet32.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet33.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet33.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet33.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet33.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet34.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet34.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet34.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet34.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet34.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet34.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet35.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet35.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet35.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet35.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet35.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet35.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet36.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet36.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet36.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet36.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet36.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet36.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet37.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet37.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet37.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet37.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet37.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet37.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet38.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet38.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet38.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet38.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet38.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet38.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet39.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet39.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet39.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet39.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet39.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet39.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet4.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet4.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet40.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet40.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet40.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet40.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet40.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet40.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet5.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet5.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet6.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet6.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet7.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet7.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet8.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet8.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet9.xsc">
+      <DependentUpon>АрендаАвтомобилейDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АрендаАвтомобилейDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АрендаАвтомобилейDataSet9.xss">
+      <DependentUpon>АрендаАвтомобилейDataSet9.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

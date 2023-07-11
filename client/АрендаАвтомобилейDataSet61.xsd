@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="АрендаАвтомобилейDataSet61" targetNamespace="http://tempuri.org/АрендаАвтомобилейDataSet61.xsd" xmlns:mstns="http://tempuri.org/АрендаАвтомобилейDataSet61.xsd" xmlns="http://tempuri.org/АрендаАвтомобилейDataSet61.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="АрендаАвтомобилейConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="АрендаАвтомобилейConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Прокат_авто.Properties.Settings.GlobalReference.Default.АрендаАвтомобилейConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Служба поддержкиTableAdapter" GeneratorDataComponentClassName="Служба_поддержкиTableAdapter" Name="Служба поддержки" UserDataComponentName="Служба поддержкиTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="АрендаАвтомобилейConnectionString (Settings)" DbObjectName="АрендаАвтомобилей.dbo.[Служба поддержки]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Сотрудник, [Дата обращения], [Описание проблемы] FROM dbo.[Служба поддержки]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Сотрудник" DataSetColumn="Сотрудник" />
+              <Mapping SourceColumn="Дата обращения" DataSetColumn="Дата обращения" />
+              <Mapping SourceColumn="Описание проблемы" DataSetColumn="Описание проблемы" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="АрендаАвтомобилейConnectionString (Settings)" DbObjectName="АрендаАвтомобилей.dbo.[Служба поддержки]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Сотрудник, [Дата обращения], [Описание проблемы] FROM dbo.[Служба поддержки] WHERE Клиент = id</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="АрендаАвтомобилейDataSet61" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="АрендаАвтомобилейDataSet61" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="АрендаАвтомобилейDataSet61">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Служба_x0020_поддержки" msprop:Generator_RowClassName="Служба_поддержкиRow" msprop:Generator_RowEvHandlerName="Служба_поддержкиRowChangeEventHandler" msprop:Generator_RowDeletedName="Служба_поддержкиRowDeleted" msprop:Generator_RowDeletingName="Служба_поддержкиRowDeleting" msprop:Generator_RowEvArgName="Служба_поддержкиRowChangeEvent" msprop:Generator_TablePropName="Служба_поддержки" msprop:Generator_RowChangedName="Служба_поддержкиRowChanged" msprop:Generator_UserTableName="Служба поддержки" msprop:Generator_RowChangingName="Служба_поддержкиRowChanging" msprop:Generator_TableClassName="Служба_поддержкиDataTable" msprop:Generator_TableVarName="tableСлужба_поддержки">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Сотрудник" msprop:Generator_UserColumnName="Сотрудник" msprop:Generator_ColumnPropNameInTable="СотрудникColumn" msprop:Generator_ColumnPropNameInRow="Сотрудник" msprop:Generator_ColumnVarNameInTable="columnСотрудник" type="xs:int" />
+              <xs:element name="Дата_x0020_обращения" msprop:Generator_UserColumnName="Дата обращения" msprop:Generator_ColumnPropNameInTable="Дата_обращенияColumn" msprop:Generator_ColumnPropNameInRow="Дата_обращения" msprop:Generator_ColumnVarNameInTable="columnДата_обращения" type="xs:dateTime" />
+              <xs:element name="Описание_x0020_проблемы" msprop:Generator_UserColumnName="Описание проблемы" msprop:Generator_ColumnPropNameInTable="Описание_проблемыColumn" msprop:Generator_ColumnPropNameInRow="Описание_проблемы" msprop:Generator_ColumnVarNameInTable="columnОписание_проблемы" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
